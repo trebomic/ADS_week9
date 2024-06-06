@@ -24,13 +24,13 @@ Wir schlagen daher PROMISE (Prompt-Orchestrating Model-driven Interaction State 
 Bei dem folgenden Gespräch handelt es sich um ein tägliches Check-in-Gespräch mit Patienten, die ein Gesundheitsinformationssystem nutzen. Ziel solcher Interaktionen ist es, das Wohlbefinden der Patienten in Bezug auf ihre chronische Erkrankung und ihren Therapieplan zu beurteilen.
 
 <p align="center">
- <img alt="Check-in interaction with patients using a health information system" src=".readme/singlestateconversation-ui.png">
+ <img alt="Check-in interaction with patients using a health information system" src="singlestateconversation-ui.png">
 </p>
 
 Bei PROMISE wird der folgende Zustandsautomat verwendet, um diese Interaktion zu entwerfen und umzusetzen.
 
 <p align="center">
- <img alt="Check-in interaction with patients using a health information system" src=".readme/singlestatemodel.png">
+ <img alt="Check-in interaction with patients using a health information system" src="singlestatemodel.png">
 </p>
 
 Der **state** ist mit der **state prompt** „Als digitaler Therapiecoach, ...“ versehen, die zur Steuerung des LM verwendet wird, während sich die Interaktion in diesem Zustand befindet. Der ausgehende **transition** , der zum Endknotenpunkt führt, ist mit den Aufforderungen „Informationen bereitgestellt“, „Keine offenen Fragen“ und „Zusammenfassen“ versehen. Diese Aufforderungen steuern den LM bei der Auswertung des Gesprächs in Bezug auf **triggers**, **guards**, und **actions**. PROMISE stellt auf transparente Weise komplexere Prompts aus solchen einfachen Prompts zusammen, die an Zustände und Übergänge gebunden sind.
@@ -125,13 +125,13 @@ Wenn Sie es erstellen können (z.B., Maven:statefulconversation:Plugins:spring-b
 Die folgende Assistenten-Patienten-Interaktion ist ein stark vereinfachtes, minimales Beispiel für die Notwendigkeit, mehrere Ziele in einer Gesprächsinteraktion zu erreichen. Die Interaktion wird ausgelöst, weil der Patient eine Therapieaktivität (Schwimmen) nicht abgeschlossen hat. Das erste Ziel dieser Interaktion besteht darin, den Grund für das Scheitern des Patienten zu erfahren (hellgrau), und das zweite Ziel besteht darin, Anpassungen an der Therapieaktivität vorzunehmen, um die Adhärenz des Patienten zu erhöhen (dunkelgrau).
 
 <p align="center">
- <img alt="Check-in interaction with patients using a health information system" src=".readme/multistateconversation.png">
+ <img alt="Check-in interaction with patients using a health information system" src="multistateconversation.png">
 </p>
 
 Der folgende Zustandsautomat modelliert diese Interaktion.
 
 <p align="center">
- <img alt="Check-in interaction with patients using a health information system" src=".readme/multistatemodel.png">
+ <img alt="Check-in interaction with patients using a health information system" src="multistatemodel.png">
 </p>
 
 Dieser Zustandsautomat enthält drei Neuerungen im Vergleich zu der oben vorgestellten Interaktion mit einem Zustand.
